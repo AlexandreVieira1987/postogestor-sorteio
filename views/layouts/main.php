@@ -17,7 +17,8 @@ $this->registerJs('__global()');
 $nome = Yii::$app->session->get('posto_slug');
 $promocao = Yii::$app->session->get('promocao_slug');
 
-$logo = $nome . '/' . Yii::$app->session->get('posto_logo');
+$path = Yii::$app->params['host'];
+$logo = $path . '/web/images/' . $nome . '/' . Yii::$app->session->get('posto_logo');
 
 ?>
 <?php $this->beginPage() ?>
@@ -62,21 +63,21 @@ $logo = $nome . '/' . Yii::$app->session->get('posto_logo');
 
     <meta name="robots" content="">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/web/images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= $path ?>/web/images/logo.png">
 
     <meta name="msapplication-TileColor" content="#ffffff">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/web/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/web/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/web/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/web/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/web/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/web/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/web/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/web/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/web/images/favicon/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?= $path ?>/web/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?= $path ?>/web/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?= $path ?>/web/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?= $path ?>/web/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?= $path ?>/web/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?= $path ?>/web/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?= $path ?>/web/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?= $path ?>/web/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= $path ?>/web/images/favicon/apple-icon-180x180.png">
 
-    <link rel="manifest" href="/web/images/favicon/manifest.json">
+    <link rel="manifest" href="<?= $path ?>/web/images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -102,7 +103,7 @@ $logo = $nome . '/' . Yii::$app->session->get('posto_logo');
                         <span class="icon-bar"></span>
                     </button>
                     <a href="<?=Url::to(['site/index'])?>" class="logo flex" style="padding-right: 30px">
-                        <img style="height: 100px" src="<?= Yii::getAlias('@images') . '/' . $logo ?>" alt="<?= ConfigSite::getTitle() ?>">
+                        <img style="height: 100px" src="<?= $logo ?>" alt="<?= ConfigSite::getTitle() ?>">
                     </a>
                 </div>
                 <nav id="navbar" class="navbar-collapse collapse">

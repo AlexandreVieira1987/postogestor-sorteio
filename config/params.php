@@ -30,23 +30,11 @@ if (file_exists(dirname(__DIR__) . '/local.txt')) {
     ];
 }
 
-if ($_SERVER['SERVER_NAME'] == 'revenda.esy.es') {
-    return [
-        'adminEmail' => 'admin@example.com',
-        'senderEmail' => 'no-reply@webaze.com.br',
-        'receiverEmail' => 'site.libaps@gmail.com',
-        'senderName' => 'Example.com mailer',
-        'host' => 'http://revenda.esy.yes',
-        'app_env' => 'stage'
-    ];
-
-}
-
 return [
     'adminEmail' => 'admin@example.com',
-    'senderEmail' => 'no-reply@webaze.com.br',
-    'receiverEmail' => 'site.libaps@gmail.com',
+    'senderEmail' => '',
+    'receiverEmail' => '',
     'senderName' => 'Example.com mailer',
-    'host' => 'https://libaps.org',
+    'host' => 'https://webaze.com.br/postogestor-sorteio',
     'app_env' => 'production'
 ];
