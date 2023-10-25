@@ -12,8 +12,8 @@ if (file_exists(dirname(__DIR__) . '/local.txt')) {
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=u170078369_libaps',
-    'username' => 'u170078369_libaps',
-    'password' => '3d2&|8oR#',
+    'dsn' => 'mysql:host=localhost;dbname=pg_sorteio',
+    'username' => 'pg_sorteio',
+    'password' => 'n2QQ@zq^uUZwSv',
     'charset' => 'utf8'
 ];
