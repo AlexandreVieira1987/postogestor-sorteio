@@ -39,7 +39,10 @@ class CadastroController extends Controller
 
     private function findModel($cpf)
     {
-        if ($model = Cliente::findOne(['cpf' => NumberHelper::numbersOnly($cpf)])) {
+        if ($model = Cliente::findOne([
+            'cpf' => NumberHelper::numbersOnly($cpf),
+            'posto_id' => (int) Yii::$app->session->get('posto_id')
+        ])) {
             return $model;
         }
 
