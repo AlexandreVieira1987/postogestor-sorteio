@@ -8,7 +8,8 @@ use yii\helpers\Url;
 $this->title = ConfigSite::getTitle();
 
 $nome = Yii::$app->session->get('posto_slug');
-$imagem = $nome . '/' . $promocao->imagem;
+$imagem = '/web/images/' . $nome . '/' . $promocao->imagem;
+$host = Yii::$app->params['host'];
 ?>
 
 <div class="col-sm-12" style="background: #fff; color: #a94442; padding: 20px" id="historia">
@@ -18,7 +19,7 @@ $imagem = $nome . '/' . $promocao->imagem;
         </div>
 
         <div class="text-center" style="margin-top: 100px">
-            <img style="height: 500px;" src="<?= Yii::getAlias('@images') . '/' . $imagem ?>"
+            <img style="height: 500px;" src="<?= $host . '/' . $imagem ?>"
                  alt="<?= ConfigSite::getTitle() ?>">
         </div>
 

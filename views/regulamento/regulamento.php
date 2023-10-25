@@ -6,7 +6,8 @@ use app\models\Promocao;
 use yii\helpers\Url;
 
 $nome = Yii::$app->session->get('posto_slug');
-$imagem = $nome . '/' . $promocao->imagem;
+$imagem = '/web/images/' . $nome . '/' . $promocao->imagem;
+$host = Yii::$app->params['host'];
 ?>
 <div class="col-sm-12" style="background: #fff; color: #a94442; padding: 20px" id="historia">
     <div class="container">
@@ -20,7 +21,7 @@ $imagem = $nome . '/' . $promocao->imagem;
 
         <div class="col-sm-4">
             <div class="text-center" style="margin-top: 100px">
-                <img style="height: 500px;" src="<?= Yii::getAlias('@images') . '/' . $imagem ?>" alt="<?= ConfigSite::getTitle() ?>">
+                <img style="height: 500px;" src="<?= $host . '/' . $imagem ?>" alt="<?= ConfigSite::getTitle() ?>">
             </div>
         </div>
 
