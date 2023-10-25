@@ -1,0 +1,20 @@
+version: '3.2'
+
+services:
+  php:
+    image: webdevops/php-apache:alpine-php7
+    container_name: postogestor_sorteio
+    ports:
+      - "5600:80"
+    volumes:
+      - .:/var/www/postogestor_sorteio
+    working_dir: /var/www/postogestor_sorteio
+    external_links:
+      - container_mysql
+    environment:
+      - WEB_DOCUMENT_ROOT=/var/www/postogestor_sorteio
+
+networks:
+  default:
+    external:
+      name: dev-network

@@ -1,0 +1,265 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    background-color: var(--color-dark);
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    #navbar {
+        height: 100vh;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+#navbar .nav > li > span,
+#navbar .nav > li a {
+    border-radius: 3px 3px 0 0;
+    transition: color 0.25s ease;
+}
+
+#navbar .nav > li > a:hover,
+#navbar .nav > li > a:focus {
+    background: var(--color-dark);
+    color: #FFF;
+}
+
+#navbar .nav > li .nav-user {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#navbar .nav li {
+    position: relative;
+}
+
+#navbar .nav li a,
+#navbar .nav li span {
+    color: #FFF;
+    display: block;
+    font-weight: 500;
+    padding: 9px 12px;
+    font-size: 17px;
+    position: relative;
+    white-space: nowrap;
+}
+
+#navbar .nav li span {
+    cursor: pointer;
+}
+
+#navbar .nav li .has-subnav:after {
+    content: "";
+    font-size: 0;
+    border: 5px solid #80868B;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+}
+
+#navbar .nav li .subnav a,
+#navbar .nav li .subnav span {
+    padding: 5px 19px;
+    color: #fff;
+}
+#navbar .nav li a:hover{
+    color: var(--color-yellow-1);
+    background: unset;
+}
+
+#navbar .nav li ul li a:hover {
+    color: var(--color-dark);
+    background: #fff;
+}
+
+#navbar .nav li .subnav hr {
+    border-top-color: #DBDBDB;
+    margin: 7px 0;
+}
+
+#navbar .nav li .subnav span:after {
+    border-bottom: 5px solid transparent;
+    border-left-color: #80868B;
+    border-right: none;
+    border-top-color: transparent;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+#navbar .nav > li:focus > .has-subnav,
+#navbar .nav > li:hover > .has-subnav {
+    background: #FAFAFA;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+#navbar .nav li:focus > .subnav,
+#navbar .nav li:hover > .subnav {
+    display: block;
+}
+
+#navbar .subnav {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    background: var(--color-dark);
+    border-radius: 0 3px 3px 3px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+    display: none;
+    min-width: 226px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    position: absolute;
+    z-index: 999;
+}
+
+#navbar .subnav-right {
+    right: 0;
+    border-radius: 3px 3px 3px 0;
+}
+
+#navbar .subnav .subnav {
+    top: -16px;
+    left: 100%;
+}
+
+#navbar .user-image {
+    border-radius: 50%;
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    height: 30px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.navbar-toggle {
+    background-color: #fff;
+}
+
+.navbar-toggle .icon-bar {
+    -moz-transition: transform 0.25s ease, opacity 0.25s 0.15s, top 0.25s ease 0.15s, -moz-transform 0.25s ease;
+    transition: transform 0.25s ease, opacity 0.25s 0.15s, top 0.25s ease 0.15s;
+    transition: transform 0.25s ease, opacity 0.25s 0.15s, top 0.25s ease 0.15s, -moz-transform 0.25s ease;
+    background: #4a4a4a;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    height: 2px;
+    position: relative;
+    top: 0;
+    width: 20px;
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "ibge_id": 11,
+    "initials": "RO",
+    "name": "Rondônia"
+  },
+  {
+    "id": 2,
+    "ibge_id": 12,
+    "initials": "AC",
+    "name": "Acre"
+  },
+  {
+    "id": 3,
+    "ibge_id": 13,
+    "initials": "AM",
+    "name": "Amazonas"
+  },
+  {
+    "id": 4,
+    "ibge_id": 14,
+    "initials": "RR",
+    "name": "Roraima"
+  },
+  {
+    "id": 5,
+    "ibge_id": 15,
+    "initials": "PA",
+    "name": "Pará"
+  },
+  {
+    "id": 6,
+    "ibge_id": 16,
+    "initials": "AP",
+    "name": "Amapá"
+  },
+  {
+    "id": 7,
+    "ibge_id": 17,
+    "initials": "TO",
+    "name": "Tocantins"
+  },
+  {
+    "id": 8,
+    "ibge_id": 21,
+    "initials": "MA",
+    "name": "Maranhão"
+  },
+  {
+    "id": 9,
+    "ibge_id": 22,
+    "initials": "PI",
+    "name": "Piauí"
+  },
+  {
+    "id": 10,
+    "ibge_id": 23,
+    "initials": "CE",
+    "name": "Ceará"
+  },
+  {
+    "id": 11,
+    "ibge_id": 24,
+    "initials": "RN",
+    "name": "Rio Grande do Norte"
+  },
+  {
+    "id": 12,
+    "ibge_id": 25,
+    "initials": "PB",
+    "name": "Paraíba"
+  },
+  {
+    "id": 13,
+    "ibge_id": 26,
+    "initials": "PE",
+    "name": "Pernambuco"
+  },
+  {
+    "id": 14,
+    "ibge_id": 27,
+    "initials": "AL",
+    "name": "Alagoas"
+  },
+  {
+    "id": 15,
+    "ibge_id": 28,
+    "initials": "SE",
+    "name": "Sergipe"
+  },
+  {
+    "id": 16,
+    "ibge_id": 29,
+    "initials": "BA",
+    "name": "Bahia"
+  },
+  {
+    "id": 17,
+    "ibge_id": 31,
+    "initials": "MG",
+    "name": "Minas Gerais"
+  },
+  {
+    "id": 18,
+    "ibge_id": 32,
+    "initials": "ES",
+    "name": "Espírito Santo"
+  },
+  {
+    "id": 19,
+    "ibge_id": 33,
+    "initials": "RJ",
+    "name": "Rio de Janeiro"
+  },
+  {
+    "id": 20,
+    "ibge_id": 35,
+    "initials": "SP",
+    "name": "São Paulo"
+  },
+  {
+    "id": 21,
+    "ibge_id": 41,
+    "initials": "PR",
+    "name": "Paraná"
+  },
+  {
+    "id": 22,
+    "ibge_id": 42,
+    "initials": "SC",
+    "name": "Santa Catarina"
+  },
+  {
+    "id": 23,
+    "ibge_id": 43,
+    "initials": "RS",
+    "name": "Rio Grande do Sul"
+  },
+  {
+    "id": 24,
+    "ibge_id": 50,
+    "initials": "MS",
+    "name": "Mato Grosso do Sul"
+  },
+  {
+    "id": 25,
+    "ibge_id": 51,
+    "initials": "MT",
+    "name": "Mato Grosso"
+  },
+  {
+    "id": 26,
+    "ibge_id": 52,
+    "initials": "GO",
+    "name": "Goiás"
+  },
+  {
+    "id": 27,
+    "ibge_id": 53,
+    "initials": "DF",
+    "name": "Distrito Federal"
+  }
+]

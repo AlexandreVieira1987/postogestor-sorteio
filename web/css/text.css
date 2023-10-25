@@ -1,0 +1,108 @@
+.title-page h1{
+    font-size: 54px;
+    line-height: 90px;
+    font-weight: 600;
+    color: var(--color-blue-1);
+    margin-bottom: 0;
+    font-family: 'Fahkwang', sans-serif;
+}
+
+.title-page h4 {
+    color: var(--color-dark);
+    font-family: 'Fahkwang', sans-serif;
+    line-height: 35px;
+}
+
+.title-page img{
+    height: 250px;
+    margin-top: 50px;
+}
+
+.title-section {
+    font-size: 35px;
+    line-height: 64px;
+    text-align: left;
+    font-family: 'Fahkwang', sans-serif;
+}
+
+.sub-title-section {
+    line-height: 40px;
+    margin-bottom: 42px;
+    font-size: 16px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.sub-title-judge-course {
+    font-size: 16px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--color-blue-2);
+    border-color: var(--color-blue-2);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: var(--color-blue-2);
+    border-color: var(--color-blue-2);
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--color-blue-1);
+    border-color: var(--color-blue-1);
+}
+.btn-primary:active {
+    color: #fff;
+    background-color: var(--color-blue-1);
+    background-image: none;
+    border-color: var(--color-blue-1);
+}
+
+
+.btn-secondary {
+    color: #fff;
+    background-color: #9BA783;
+    border-color: #9BA783;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+.btn-secondary:focus,
+.btn-secondary.focus {
+    color: #fff;
+    background-color: #9BA783;
+    border-color: #9BA783;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #727A60;
+    border-color: #727A60;
+}
+.btn-secondary:active {
+    color: #fff;
+    background-color: var(--color-blue-1);
+    background-image: none;
+    border-color: var(--color-blue-1);
+}
+
+.text-center {
+    text-align: center !important;
+}
+.font-titulo{
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    font-weight: bold;
+    padding-bottom: 15px;
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+.text-contato {
+    font-family: 'Libre Franklin', sans-serif
+}
+.text-contato-info {
+    font-family: 'Libre Franklin', sans-serif;
+}

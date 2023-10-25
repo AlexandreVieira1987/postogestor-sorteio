@@ -1,0 +1,104 @@
+#product tr{
+    cursor: pointer;
+}
+
+.field-customer-birthday{
+    margin-top: -4px;
+}
+
+.field-customer-birthday input{
+    max-height: 30px;
+    box-shadow: none !important;
+}
+
+.select2-container--krajee .select2-selection--single{
+    height: 40px;
+    padding: 6px 10px;
+}
+
+.navbar-brand{
+    margin-top: 5px;
+}
+
+.navbar{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.logo{
+    padding: 1px 0;
+    margin-right: 20px;
+}
+
+.logo img{
+    height: 30px;
+    margin-right: 10px;
+}
+
+.items-baseline {
+    -webkit-box-align: flex-end !important;
+    -ms-flex-align: flex-end !important;
+    align-items: flex-end;
+}
+
+.flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    flex-wrap: unset !important;
+}
+
+.logo .logo-text {
+    font-size: 11px;
+    color: #e13841;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.section-nav.section-button{
+    margin-top: -52px;
+}
+
+.text-nowrap{
+    max-width: 22ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modal-body{
+    background: #ffffff;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.calendar-month .col-md-1{
+    padding: 0;
+}
+
+.calendar-month .col-md-1:first-child{
+    padding-left: 10px;
+}
+
+.calendar-month .col-md-1:last-child{
+    padding-right: 10px;
+}
+
+.calendar-month .col-md-1:last-child a{
+    border-right: 1px solid #cecece;
+}
+
+.calendar-month a{
+    border-left: 1px solid #cecece;
+    border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+    border-radius: 0;
+}
+
+.calendar-month a.btn-primary{
+    border-color: #3F93F3;
+}
+
+.calendar-month a span{
+    text-transform: uppercase;
+}
