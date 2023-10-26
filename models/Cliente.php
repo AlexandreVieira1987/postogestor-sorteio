@@ -29,6 +29,7 @@ use yiibr\brvalidator\CpfValidator;
  * @property string|null $created_at
  * @property string|null $updated_at
  * @property string|null $remote_id
+ * @property string|null $placa
  *
  * @property string|null $birthDateFormatted
  * @property string|null $zipCodeFormatted
@@ -64,11 +65,11 @@ class Cliente extends \yii\db\ActiveRecord
             [['first_name', 'last_name'], 'string', 'max' => 100],
             [['cpf'], 'string', 'max' => 11],
             [['phone'], 'string', 'max' => 15],
-            [['remote_id'], 'string', 'max' => 20],
+            [['remote_id', 'placa'], 'string', 'max' => 20],
             [['email'], 'email'],
             [['street', 'neighbourhood'], 'string', 'max' => 150],
             [['zip_code'], 'string', 'max' => 15],
-            [['first_name', 'last_name', 'cpfFormatted', 'email', 'phone', 'zipCodeFormatted', 'phoneFormatted',
+            [['first_name', 'last_name', 'placa', 'cpfFormatted', 'email', 'phone', 'zipCodeFormatted', 'phoneFormatted',
                 'street', 'neighbourhood', 'city', 'birthDateFormatted'], 'required'],
             [['cpfFormatted'], CpfValidator::class]
         ];
@@ -90,6 +91,7 @@ class Cliente extends \yii\db\ActiveRecord
             'email' => 'E-mail',
             'city' => 'Cidade',
             'street' => 'Rua/Avenida',
+            'placa' => 'Placa',
             'neighbourhood' => 'Bairro',
             'zipCodeFormatted' => 'CEP',
             'created_at' => 'Created At',
