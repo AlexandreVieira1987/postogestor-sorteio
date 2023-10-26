@@ -29,11 +29,27 @@ class CadastroController extends Controller
 
             $model->load($post);
             $model->save();
+
+            Yii::$app->session->setFlash('cadastro-ok', $model->first_name);
+            return $this->redirect(['cadastro/ok', 'slug' => $slug, 'promocao' => $promocao]);
         }
 
         return $this->render('index', [
             'promocao' => Cliente::findCliente($promocao),
             'model' => $model
+        ]);
+    }
+
+    public function actionOk($slug, $promocao)
+    {
+        $name = Yii::$app->session->getFlash('cadastro-ok');
+        if (!$name) {
+            return $this->redirect(['site/index', 'slug' => $slug, 'promocao' => $promocao]);
+        }
+
+        return $this->render('ok', [
+            'promocao' => Cliente::findCliente($promocao),
+            'name' => $name
         ]);
     }
 
