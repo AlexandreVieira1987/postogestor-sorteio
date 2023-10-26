@@ -40,10 +40,10 @@ $this->registerJs('__form()');
                     'phoneFormatted' => ['type' => 'input', 'class' => 'control-phone_2'],
                     'email' => ['type' => 'input', 'class' => ''],
                     'placa' => ['type' => 'input', 'class' => ''],
-                    'zipCodeFormatted' => ['type' => 'input', 'class' => 'control-cep'],
-                    'city' => ['type' => 'select', 'class' => ''],
-                    'street' => ['type' => 'input', 'class' => ''],
-                    'neighbourhood' => ['type' => 'input', 'class' => '']
+//                    'zipCodeFormatted' => ['type' => 'input', 'class' => 'control-cep'],
+//                    'city' => ['type' => 'select', 'class' => ''],
+//                    'street' => ['type' => 'input', 'class' => ''],
+//                    'neighbourhood' => ['type' => 'input', 'class' => '']
                 ];
 
                 $i = 1;
