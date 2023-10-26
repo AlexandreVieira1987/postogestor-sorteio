@@ -44,6 +44,6 @@ abstract class ClientApiTecnuv
 
     protected function buildUrl(): string
     {
-        return ArrayHelper::getValue(\Yii::$app->params, 'whatsgw.host') . '/' . $this->service;
+        return ArrayHelper::getValue(\Yii::$app->params, 'api') . '/' . $this->service;
     }
 }

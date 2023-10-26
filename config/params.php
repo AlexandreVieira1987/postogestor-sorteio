@@ -26,7 +26,8 @@ if (file_exists(dirname(__DIR__) . '/local.txt')) {
         'receiverEmail' => 'site.libaps@gmail.com',
         'senderName' => 'Example.com mailer',
         'host' => 'http://localhost:5600',
-        'app_env' => 'local'
+        'app_env' => 'local',
+        'api' => 'https://api.tecnuv.com.br/api/v1'
     ];
 }
 
@@ -36,5 +37,6 @@ return [
     'receiverEmail' => '',
     'senderName' => 'Example.com mailer',
     'host' => 'https://webaze.com.br/postogestor-sorteio',
-    'app_env' => 'production'
+    'app_env' => 'production',
+    'api' => 'https://api.tecnuv.com.br/api/v1'
 ];

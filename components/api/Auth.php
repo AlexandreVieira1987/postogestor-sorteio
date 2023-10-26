@@ -25,15 +25,18 @@ class Auth extends ClientApiTecnuv
 
     public function execute()
     {
-        $host = $this->model->posto->metadata['api']['host'];
+        $server = $this->model->posto->metadata['api']['server'];
         $user = $this->model->posto->metadata['api']['user'];
         $pass = $this->model->posto->metadata['api']['pass'];
         $clientId = $this->model->posto->metadata['api']['clientId'];
 
-//        foreach ($this->model as $item) {
-//            print_r($item);
-//        }
+        $login = $this->request([
+            'usuario' => $user,
+            'senha' => $pass,
+            'servidor' => $server,
+            'clientId' => $clientId
+        ]);
 
-        exit;
+        return $login['token'];
     }
 }
