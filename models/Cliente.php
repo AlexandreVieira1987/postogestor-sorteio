@@ -49,21 +49,6 @@ class Cliente extends \yii\db\ActiveRecord
         return 'cliente';
     }
 
-    public function getPosto()
-    {
-        return $this->hasOne(Posto::class, ['posto_id' => 'id']);
-    }
-
-
-    public function beforeSave($insert)
-    {
-        if ($insert) {
-            $this->created_at = date('Y-m-d h:i:s');
-        }
-
-        $this->updated_at = date('Y-m-d h:i:s');
-        return parent::beforeSave($insert);
-    }
 
     /**
      * {@inheritdoc}
@@ -108,6 +93,21 @@ class Cliente extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    public function getPosto()
+    {
+        return $this->hasOne(Posto::class, ['id' => 'posto_id']);
+    }
+
+    public function beforeSave($insert)
+    {
+        if ($insert) {
+            $this->created_at = date('Y-m-d h:i:s');
+        }
+
+        $this->updated_at = date('Y-m-d h:i:s');
+        return parent::beforeSave($insert);
     }
 
     public function getCpfFormatted()
