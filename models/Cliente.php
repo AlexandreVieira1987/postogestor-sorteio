@@ -69,8 +69,7 @@ class Cliente extends \yii\db\ActiveRecord
             [['email'], 'email'],
             [['street', 'neighbourhood'], 'string', 'max' => 150],
             [['zip_code'], 'string', 'max' => 15],
-            [['first_name', 'last_name', 'placa', 'cpfFormatted', 'email', 'phone', 'zipCodeFormatted', 'phoneFormatted',
-                'street', 'neighbourhood', 'city', 'birthDateFormatted'], 'required'],
+            [['first_name', 'last_name', 'placa', 'cpfFormatted', 'email', 'phoneFormatted', 'birthDateFormatted'], 'required'],
             [['cpfFormatted'], CpfValidator::class]
         ];
     }
