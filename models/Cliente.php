@@ -28,6 +28,7 @@ use yiibr\brvalidator\CpfValidator;
  * @property string|null $zip_code
  * @property string|null $created_at
  * @property string|null $updated_at
+ * @property string|null $remote_id
  *
  * @property string|null $birthDateFormatted
  * @property string|null $zipCodeFormatted
@@ -63,6 +64,7 @@ class Cliente extends \yii\db\ActiveRecord
             [['first_name', 'last_name'], 'string', 'max' => 100],
             [['cpf'], 'string', 'max' => 11],
             [['phone'], 'string', 'max' => 15],
+            [['remote_id'], 'string', 'max' => 20],
             [['email'], 'email'],
             [['street', 'neighbourhood'], 'string', 'max' => 150],
             [['zip_code'], 'string', 'max' => 15],
@@ -92,6 +94,7 @@ class Cliente extends \yii\db\ActiveRecord
             'zipCodeFormatted' => 'CEP',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'remote_id' => 'Remote id'
         ];
     }
 

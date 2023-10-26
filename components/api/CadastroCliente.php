@@ -49,7 +49,8 @@ class CadastroCliente extends ClientApiTecnuv
                 'Authorization' => 'Bearer ' . $token
             ]);
 
-//            $this->model->remote_id = $request['id'];
+            $this->model->remote_id = $request['id'];
+            $this->model->save();
 
             return true;
 
