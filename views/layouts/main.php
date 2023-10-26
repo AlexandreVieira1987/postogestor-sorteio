@@ -39,6 +39,22 @@ $logo = $host . '/web/images/' . $nome . '/' . Yii::$app->session->get('posto_lo
         // gtag('config', 'G-Y5W17TQLWC');
     </script>
 
+    <style type="text/css">
+
+        @media screen and (max-width: 700px){
+            .images {
+                max-height: 500px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 700px){
+            .images {
+                height: 500px;
+            }
+        }
+    </style>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@200&family=Montserrat:wght@200&Libre+Franklin&family=Tenor+Sans&display=swap" rel="stylesheet">

@@ -76,7 +76,7 @@ $this->registerJs('__form()');
 
         <div class="col-sm-4">
             <div class="text-center" style="margin-top: 100px">
-                <img style="height: 500px;" src="<?= $host . '/' . $imagem ?>" alt="<?= ConfigSite::getTitle() ?>">
+                <img class="images" src="<?= $host . '/' . $imagem ?>" alt="<?= ConfigSite::getTitle() ?>">
             </div>
         </div>
     </div>

@@ -19,8 +19,7 @@ $host = Yii::$app->params['host'];
         </div>
 
         <div class="text-center" style="margin-top: 100px">
-            <img style="height: 500px;" src="<?= $host . '/' . $imagem ?>"
-                 alt="<?= ConfigSite::getTitle() ?>">
+            <img src="<?= $host . '/' . $imagem ?>" class="images" alt="<?= ConfigSite::getTitle() ?>">
         </div>
 
         <div class="text-center" style="margin-top: 100px">
