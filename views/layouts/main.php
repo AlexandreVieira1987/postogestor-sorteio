@@ -118,7 +118,7 @@ $logo = $host . '/web/images/' . $nome . '/' . Yii::$app->session->get('posto_lo
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="<?=Url::to(['site/index'])?>" class="logo flex" style="padding-right: 30px">
+                    <a href="<?=Url::to(['site/index', 'slug' => $nome, 'promocao' => $promocao])?>" class="logo flex" style="padding-right: 30px">
                         <img style="height: 100px" src="<?= $logo ?>" alt="<?= ConfigSite::getTitle() ?>">
                     </a>
                 </div>
