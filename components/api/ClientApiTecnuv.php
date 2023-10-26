@@ -23,7 +23,7 @@ abstract class ClientApiTecnuv
         return $this->client;
     }
 
-    protected function request($body)
+    protected function request($body, $headers = [])
     {
         $options = [];
 
@@ -31,11 +31,16 @@ abstract class ClientApiTecnuv
             'Content-Type' => 'application/json'
         ];
 
-        $body['apikey'] = ArrayHelper::getValue(\Yii::$app->params, 'whatsgw.apikey');
+        if ($headers) {
+            foreach ($headers as $header => $value) {
+                $options['headers'][$header] = $value;
+            }
+        }
+
 
         $options['json'] = $body;
         $response = $this->getClient()->request($this->method, $this->buildUrl(), $options);
-        if ($response->getStatusCode() == 200) {
+        if (in_array($response->getStatusCode(), [200, 201])) {
             return Json::decode($response->getBody()->getContents());
         }
 

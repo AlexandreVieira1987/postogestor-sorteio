@@ -3,6 +3,8 @@
 namespace app\components\api;
 
 use app\models\Cliente;
+use yii\helpers\ArrayHelper;
+use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 
 class CadastroCliente extends ClientApiTecnuv
@@ -21,17 +23,38 @@ class CadastroCliente extends ClientApiTecnuv
         }
 
         $this->model = $model;
-        $this->service = 'customer';
+        $this->service = 'public/entidades/cadastro_simples';
         $this->method = 'POST';
     }
 
 
     public function execute()
     {
-        foreach ($this->model as $item) {
-            var_dump($item->contact->phone);
+        $login = new Auth($this->model);
+        $token = $login->execute();
+
+        if (!$token) {
+            throw new ForbiddenHttpException('Não foi possível gerar o token');
         }
 
-        exit;
+        try {
+            $request = $this->request([
+                'nome' => $this->model->first_name . ' ' . $this->model->last_name,
+                'cpfCnpj' => $this->model->cpf,
+                'fone' => $this->model->phone,
+                'email' => $this->model->email,
+                'dataNascimento' => $this->model->birth_date,
+                'placa' => ''
+            ], [
+                'Authorization' => 'Bearer ' . $token
+            ]);
+
+//            $this->model->remote_id = $request['id'];
+
+            return true;
+
+        } catch (\Exception $err) {
+            return false;
+        }
     }
 }
