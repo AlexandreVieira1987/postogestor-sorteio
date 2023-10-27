@@ -18,8 +18,11 @@ $host = Yii::$app->params['host'];
             <h2 class="title-section text-center" style="color: var(--color-blue-1);"><?= $promocao->name ?></h2>
         </div>
 
-        <div class="text-center" style="margin-top: 100px">
-            <img src="<?= $host . '/' . $imagem ?>" class="images" alt="<?= ConfigSite::getTitle() ?>">
+        <div class="text-center" style="margin-top: 50px">
+            <a href="<?= Url::to(['cadastro/index', 'slug' => $nome, 'promocao' => $promocao->slug]) ?>"
+               class="text-center btn btn-primary" style="color: #fff; padding: 30px; font-size: 20px">
+                PARTICIPAR DA PROMOÇÃO
+            </a>
         </div>
 
         <div class="text-center" style="margin-top: 100px">
@@ -27,10 +30,10 @@ $host = Yii::$app->params['host'];
         </div>
 
         <div class="text-center" style="margin-top: 100px">
-            <a href="<?= Url::to(['cadastro/index', 'slug' => $nome, 'promocao' => $promocao->slug]) ?>"
-               class="text-center btn btn-primary" style="color: #fff; padding: 30px; font-size: 20px">
-                PARTICIPAR DA PROMOÇÃO
-            </a>
+            <img style="width: 70%" src="<?= $host . '/' . $imagem ?>" class="images" alt="<?= ConfigSite::getTitle() ?>">
         </div>
+
+
+
     </div>
 </div>

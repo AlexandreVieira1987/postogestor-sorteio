@@ -50,7 +50,8 @@ $logo = $host . '/web/images/' . $nome . '/' . Yii::$app->session->get('posto_lo
 
         @media screen and (min-width: 700px){
             .images {
-                height: 500px;
+                /*max-height: 500px;*/
+                width: 100%;
             }
         }
     </style>
