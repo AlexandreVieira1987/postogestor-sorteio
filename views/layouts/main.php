@@ -80,7 +80,7 @@ $logo = $host . '/web/images/' . $nome . '/' . Yii::$app->session->get('posto_lo
 
     <meta name="robots" content="">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= $host ?>/web/images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= $host ?>/web/images/<?= $nome ?>/logo.png">
 
     <meta name="msapplication-TileColor" content="#ffffff">
 

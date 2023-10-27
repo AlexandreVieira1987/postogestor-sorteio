@@ -86,7 +86,9 @@ class Config extends ActiveRecord
             return $cache;
         }
 
-        $model = (new Query())->from(['config'])->limit(1)->one();
+        $postoId = \Yii::$app->session->get('posto_id');
+
+        $model = (new Query())->from(['config'])->where(['posto_id' => $postoId])->one();
 
         $items = [];
         foreach ($model as $key => $item) {
