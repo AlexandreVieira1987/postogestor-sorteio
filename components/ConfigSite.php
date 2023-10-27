@@ -26,12 +26,31 @@ class ConfigSite
 
     public static function getPhone1()
     {
-        return App::mask('(##) #####-####', ArrayHelper::getValue(Config::getConfig(), 'phone_1'));
+        $phone = ArrayHelper::getValue(Config::getConfig(), 'phone_1');
+        if (!$phone) {
+            return null;
+        }
+        return App::mask('(##) #####-####', $phone);
     }
 
     public static function getPhone2()
     {
         return ArrayHelper::getValue(Config::getConfig(), 'phone_2');
+    }
+
+    public static function instagram()
+    {
+        return ArrayHelper::getValue(Config::getConfig(), 'metadata.instagram');
+    }
+
+    public static function facebook()
+    {
+        return ArrayHelper::getValue(Config::getConfig(), 'metadata.facebook');
+    }
+
+    public static function site()
+    {
+        return ArrayHelper::getValue(Config::getConfig(), 'metadata.site');
     }
 
     public static function getTitle()
