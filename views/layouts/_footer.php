@@ -57,7 +57,7 @@ $email = ConfigSite::getEmail();
                         <?php endif; ?>
 
                         <?php if ($site): ?>
-                            <a href=mailto:"<?= $site ?>" title="acesse nosso site" data-toggle="tooltip" target="_blank">
+                            <a href="<?= $site ?>" title="acesse nosso site" data-toggle="tooltip" target="_blank">
                                 <img src="<?= $host ?>/site.png" style="height: 70px; padding: 10px" alt="<?= ConfigSite::getTitle() ?>">
                             </a>
                         <?php endif; ?>
