@@ -6,6 +6,7 @@ use app\helpers\NumberHelper;
 use app\models\City;
 use app\models\Cliente;
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\Controller;
 
@@ -47,9 +48,15 @@ class CadastroController extends Controller
             return $this->redirect(['site/index', 'slug' => $slug, 'promocao' => $promocao]);
         }
 
+        $model = Cliente::findCliente($promocao);
+
+        $phrase = ArrayHelper::getValue($model->metadata, 'frase_finalzacao', '');
+        $phrase = str_replace('{{nome}}', $name, $phrase);
+
         return $this->render('ok', [
-            'promocao' => Cliente::findCliente($promocao),
-            'name' => $name
+            'promocao' => $model,
+            'name' => $name,
+            'phrase' => $phrase
         ]);
     }
 

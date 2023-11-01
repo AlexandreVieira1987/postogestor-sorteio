@@ -1,6 +1,7 @@
 <?php
 /** @var Promocao $promocao */
 /** @var string $name */
+/** @var string $phrase */
 
 use app\components\ConfigSite;
 use app\models\Promocao;
@@ -17,9 +18,9 @@ $host = Yii::$app->params['host'];
     <div class="container">
         <div class="text-center">
             <h2 class="text-ok text-center">
-                Parabéns <?= $name ?>!, <br>
+                Parabéns <?= $name ?>!<br>
             </h2>
-            <h3>Você está participando da promoção: <?= $promocao->name ?></h3>
+            <h3><?= $phrase ?></h3>
         </div>
 
         <div class="text-center" style="margin-top: 100px">
