@@ -38,7 +38,7 @@ $this->registerJs('__form()');
                     'cpfFormatted' => ['type' => 'input', 'class' => 'control-cpf'],
                     'birthDateFormatted' => ['type' => 'input', 'class' => 'control-date'],
                     'phoneFormatted' => ['type' => 'input', 'class' => 'control-phone_2'],
-                    'email' => ['type' => 'input', 'class' => ''],
+                    'email' => ['type' => 'input', 'class' => 'lower-case'],
                     'placa' => ['type' => 'input', 'class' => ''],
 //                    'zipCodeFormatted' => ['type' => 'input', 'class' => 'control-cep'],
 //                    'city' => ['type' => 'select', 'class' => ''],
@@ -114,6 +114,10 @@ $this->registerJs('__form()');
     .form-control {
         height: 55px;
         font-size: 18px;
+    }
+
+    .lower-case {
+        text-transform: lowercase;
     }
 
     .select2-container--krajee .select2-selection--single {
