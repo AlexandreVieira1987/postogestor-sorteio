@@ -55,6 +55,7 @@ class CadastroCliente extends ClientApiTecnuv
             return true;
 
         } catch (\Exception $err) {
+            var_dump($err);
             return false;
         }
     }
